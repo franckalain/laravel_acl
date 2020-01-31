@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\User;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        //$this->call(UsersTableSeeder::class);
+        $this->call(PermissionTableSeeder::class);
+        $this->call(CreateAdminUserSeeder::class);
     }
 }
